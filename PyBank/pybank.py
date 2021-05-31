@@ -2,7 +2,10 @@ import os
 import csv
 
 budget_data_file = os.path.join("Resources", "budget_data.csv")
-if os.path.exists(budget_data_file):
+if not os.path.exists(budget_data_file):
+    print("\nFile not found")
+    print(f"Expected to find /Resources/budget_data.csv \nin current working directory ({os.getcwd()})")
+else: 
     with open(budget_data_file, 'r') as csvfile:
         count = 0
         total = 0
@@ -49,8 +52,4 @@ if os.path.exists(budget_data_file):
     #  Create Summary output file
     # os.write()
 
-else:
-    print("\nFile not found")
-    print(f"Expected to find /Resources/budget_data.csv \nin current working directory ({os.getcwd()})")
-    
-    
+  
