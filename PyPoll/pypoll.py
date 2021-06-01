@@ -4,15 +4,6 @@ import os
 
 election_data_csv = os.path.join("Resources","election_data.csv")
 target_path = os.path.join("Analysis","election_results.txt")
-# dictionary = {"Candidate": {voter1, voter2, ...}, 
-#               "Candidate2": {voterx, ...}}
-
-# for row: 
-#   if candidate in dictionary:
-#        dictionary[candidate].add(voterid)
-#   else:
-#        dictionary.update({candidate : {voterid}})
-
 
 if (not os.path.exists(target_path)):
     try:
@@ -28,10 +19,8 @@ else:
     with open(election_data_csv, 'r') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         header = next(csvreader)
-        # for element in header:
-        #     print(element)
+        # Header:
         # Voter ID | County | Candidate
-
         
         # dictionary for holding votes for candidates sorted by county
         # {county : {candidate : {voterid, voterid}, 

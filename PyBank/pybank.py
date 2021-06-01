@@ -44,9 +44,10 @@ else:
             #     Store min delta
             if (delta < mindelta[2]): mindelta = (month, profit, delta)
             #  Calculate average delta
-            total_delta += delta
+            if count > 1: total_delta += delta
 
-    average: float = float(total_delta/count)
+    # count -1 to ignore the first row, since it has no predecessor to compare against
+    average: float = float(total_delta/(count-1))
 
     output = "\n"
     output += "Financial Analysis\n"
@@ -57,7 +58,7 @@ else:
     output += f"Greatest Increase in Profits: {maxdelta[0]}: ${int(maxdelta[2]):,}\n"
     output += f"Greatest Decrease in Profits: {mindelta[0]}: ${int(mindelta[2]):,}"
     output += "\n"
-    
+
     print(output)
 
     with open(target_path, "w") as output_file:
