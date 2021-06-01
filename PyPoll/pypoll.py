@@ -3,7 +3,7 @@ from genericpath import exists
 import os
 
 election_data_csv = os.path.join("Resources","election_data.csv")
-
+target_path = os.path.join("Output","election_results.txt")
 # dictionary = {"Candidate": {voter1, voter2, ...}, 
 #               "Candidate2": {voterx, ...}}
 
@@ -13,6 +13,14 @@ election_data_csv = os.path.join("Resources","election_data.csv")
 #   else:
 #        dictionary.update({candidate : {voterid}})
 
+
+if (not os.path.exists(target_path)):
+    try:
+        os.mkdir("Output")
+        newfile = open(target_path, "x")
+        newfile.close()
+    except:
+        print("oops I don't know how these work yet")
 if (not os.path.exists(election_data_csv)):
     print("\nFile not found")
     print(f"Expected to find /Resources/election_data.csv \nin current working directory ({os.getcwd()})")
@@ -44,8 +52,11 @@ else:
             county = row[1]
             candidate = row[2]
 
+            # check for voter fraud
             if voterid in allvoterids:
                 print(f"{voterid} has voted more than once!")
+                # TODO: resolve the fraud somehow
+                # temporary solution skips the duplicated vote (but arbitrarily leaves in the earlier vote)
             else:
                 if county in votes_by_county:
                     if candidate in votes_by_county[county]:
@@ -62,7 +73,7 @@ else:
 
                 allvoterids.add(voterid)
 
-        output = ""
+        output = "\nThe election results are in!\n\n"
         total = len(allvoterids)
         winner = ("", 0)
 
@@ -86,6 +97,7 @@ else:
         output += f"\nThe winner is {winner[0]}!\n"
         
         print(output)
-
+        with open(target_path, "w") as output_file:
+            output_file.write(output)
 
 

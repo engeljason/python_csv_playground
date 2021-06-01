@@ -2,6 +2,16 @@ import os
 import csv
 
 budget_data_file = os.path.join("Resources", "budget_data.csv")
+target_path = os.path.join("Output", "budget_report.txt")
+
+if (not os.path.exists(target_path)):
+    try:
+        os.mkdir("Output")
+        newfile = open(target_path, "x")
+        newfile.close()
+    except:
+        print("oops I don't know how these work yet")
+
 if not os.path.exists(budget_data_file):
     print("\nFile not found")
     print(f"Expected to find /Resources/budget_data.csv \nin current working directory ({os.getcwd()})")
@@ -49,7 +59,6 @@ else:
 
     print(output)
 
-    #  Create Summary output file
-    # os.write()
+    with open(target_path, "w") as output_file:
+        output_file.write(output)
 
-  
