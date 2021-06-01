@@ -48,7 +48,7 @@ else:
 
     average: float = float(total_delta/count)
 
-    output = ""
+    output = "\n"
     output += "Financial Analysis\n"
     output += "-------------------\n"
     output += f"Total Months: {count}\n"
@@ -56,7 +56,8 @@ else:
     output += f"Average Change: ${average:,.2f}\n"
     output += f"Greatest Increase in Profits: {maxdelta[0]}: ${int(maxdelta[2]):,}\n"
     output += f"Greatest Decrease in Profits: {mindelta[0]}: ${int(mindelta[2]):,}"
-
+    output += "\n"
+    
     print(output)
 
     with open(target_path, "w") as output_file:
