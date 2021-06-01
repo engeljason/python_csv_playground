@@ -2,11 +2,11 @@ import os
 import csv
 
 budget_data_file = os.path.join("Resources", "budget_data.csv")
-target_path = os.path.join("Output", "budget_report.txt")
+target_path = os.path.join("Analysis", "budget_report.txt")
 
 if (not os.path.exists(target_path)):
     try:
-        os.mkdir("Output")
+        os.mkdir("Analysis")
         newfile = open(target_path, "x")
         newfile.close()
     except:

@@ -3,7 +3,7 @@ from genericpath import exists
 import os
 
 election_data_csv = os.path.join("Resources","election_data.csv")
-target_path = os.path.join("Output","election_results.txt")
+target_path = os.path.join("Analysis","election_results.txt")
 # dictionary = {"Candidate": {voter1, voter2, ...}, 
 #               "Candidate2": {voterx, ...}}
 
@@ -16,7 +16,7 @@ target_path = os.path.join("Output","election_results.txt")
 
 if (not os.path.exists(target_path)):
     try:
-        os.mkdir("Output")
+        os.mkdir("Analysis")
         newfile = open(target_path, "x")
         newfile.close()
     except:

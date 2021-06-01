@@ -1,0 +1,45 @@
+
+The election results are in!
+
+In Marsh County:
+Candidate Khan received 1,427,142 votes (62.982%)
+Candidate Correy received 453,015 votes (19.992%)
+Candidate Li received 317,651 votes (14.018%)
+Candidate O'Tooley received 68,149 votes (3.008%)
+County Total: 2,265,957
+
+In Queen County:
+Candidate Khan received 439,494 votes (63.037%)
+Candidate Correy received 139,554 votes (20.016%)
+Candidate O'Tooley received 20,850 votes (2.991%)
+Candidate Li received 97,305 votes (13.956%)
+County Total: 697,203
+
+In Bamoo County:
+Candidate Correy received 69,752 votes (20.006%)
+Candidate O'Tooley received 10,433 votes (2.992%)
+Candidate Li received 48,639 votes (13.950%)
+Candidate Khan received 219,834 votes (63.051%)
+County Total: 348,658
+
+In Trandee County:
+Candidate Khan received 65,939 votes (63.029%)
+Candidate Correy received 20,824 votes (19.905%)
+Candidate Li received 14,741 votes (14.090%)
+Candidate O'Tooley received 3,113 votes (2.976%)
+County Total: 104,617
+
+In Raffah County:
+Candidate Khan received 65,822 votes (62.948%)
+Candidate Li received 14,604 votes (13.966%)
+Candidate Correy received 21,055 votes (20.136%)
+Candidate O'Tooley received 3,085 votes (2.950%)
+County Total: 104,566
+
+Total votes for all counties: 3,521,001
+The total votes for Khan is 2,218,231 (63.000%)
+The total votes for Correy is 704,200 (20.000%)
+The total votes for Li is 492,940 (14.000%)
+The total votes for O'Tooley is 105,630 (3.000%)
+
+The winner is Khan!
